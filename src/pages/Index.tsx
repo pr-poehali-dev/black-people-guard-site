@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -7,6 +8,7 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -36,9 +38,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('team')} className="hover:text-primary transition-colors">
                 Команда
               </button>
-              <button onClick={() => scrollToSection('pricing')} className="hover:text-primary transition-colors">
-                Тарифы
-              </button>
+
               <button onClick={() => scrollToSection('contact')} className="hover:text-primary transition-colors">
                 Контакты
               </button>
@@ -65,9 +65,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('team')} className="text-left hover:text-primary transition-colors">
                 Команда
               </button>
-              <button onClick={() => scrollToSection('pricing')} className="text-left hover:text-primary transition-colors">
-                Тарифы
-              </button>
+
               <button onClick={() => scrollToSection('contact')} className="text-left hover:text-primary transition-colors">
                 Контакты
               </button>
@@ -112,8 +110,11 @@ const Index = () => {
               Полный спектр услуг персональной охраны
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <Card 
+                className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer"
+                onClick={() => navigate('/service/personal-security')}
+              >
                 <CardHeader>
                   <Icon name="UserCheck" size={40} className="text-primary mb-4" />
                   <CardTitle>Личная охрана</CardTitle>
@@ -136,10 +137,16 @@ const Index = () => {
                       Конфиденциальность
                     </li>
                   </ul>
+                  <Button className="w-full mt-4" variant="outline">
+                    Подробнее
+                  </Button>
                 </CardContent>
               </Card>
 
-              <Card className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <Card 
+                className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer"
+                onClick={() => navigate('/service/escort')}
+              >
                 <CardHeader>
                   <Icon name="Car" size={40} className="text-primary mb-4" />
                   <CardTitle>Сопровождение</CardTitle>
@@ -162,10 +169,16 @@ const Index = () => {
                       Бронированный транспорт
                     </li>
                   </ul>
+                  <Button className="w-full mt-4" variant="outline">
+                    Подробнее
+                  </Button>
                 </CardContent>
               </Card>
 
-              <Card className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <Card 
+                className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer"
+                onClick={() => navigate('/service/property-security')}
+              >
                 <CardHeader>
                   <Icon name="Home" size={40} className="text-primary mb-4" />
                   <CardTitle>Охрана объектов</CardTitle>
@@ -188,36 +201,16 @@ const Index = () => {
                       Патрулирование
                     </li>
                   </ul>
+                  <Button className="w-full mt-4" variant="outline">
+                    Подробнее
+                  </Button>
                 </CardContent>
               </Card>
 
-              <Card className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
-                <CardHeader>
-                  <Icon name="Users" size={40} className="text-primary mb-4" />
-                  <CardTitle>Защита семьи</CardTitle>
-                  <CardDescription>
-                    Комплексная безопасность для всей семьи
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-primary" />
-                      Охрана детей
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-primary" />
-                      Сопровождение супруги
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-primary" />
-                      Защита дома
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <Card 
+                className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer"
+                onClick={() => navigate('/service/business-security')}
+              >
                 <CardHeader>
                   <Icon name="Briefcase" size={40} className="text-primary mb-4" />
                   <CardTitle>Деловая безопасность</CardTitle>
@@ -240,32 +233,9 @@ const Index = () => {
                       Контроль информации
                     </li>
                   </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
-                <CardHeader>
-                  <Icon name="Plane" size={40} className="text-primary mb-4" />
-                  <CardTitle>Международная охрана</CardTitle>
-                  <CardDescription>
-                    Безопасность в международных поездках
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-primary" />
-                      Сопровождение за рубежом
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-primary" />
-                      Знание языков
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-primary" />
-                      Международные связи
-                    </li>
-                  </ul>
+                  <Button className="w-full mt-4" variant="outline">
+                    Подробнее
+                  </Button>
                 </CardContent>
               </Card>
             </div>
@@ -318,134 +288,6 @@ const Index = () => {
                   100% выполнение поставленных задач по защите клиентов
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="pricing" className="py-20 bg-secondary/30">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Тарифы</h2>
-            <p className="text-center text-muted-foreground mb-12 text-lg">
-              Выберите подходящий уровень защиты
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <Card className="border-border hover:border-primary transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Базовый</CardTitle>
-                  <CardDescription>Для повседневной защиты</CardDescription>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">₽150,000</span>
-                    <span className="text-muted-foreground">/месяц</span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>1 телохранитель</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Дневное время (12ч)</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Базовое оборудование</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Связь 24/7</span>
-                    </li>
-                  </ul>
-                  <Button className="w-full mt-6" variant="outline" onClick={() => scrollToSection('contact')}>
-                    Выбрать тариф
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="border-primary shadow-lg shadow-primary/20 relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-bold">
-                  Популярный
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl">Премиум</CardTitle>
-                  <CardDescription>Максимальная безопасность</CardDescription>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">₽350,000</span>
-                    <span className="text-muted-foreground">/месяц</span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>2 телохранителя</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Круглосуточно 24/7</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Продвинутое оборудование</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Бронированный транспорт</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Охрана объектов</span>
-                    </li>
-                  </ul>
-                  <Button className="w-full mt-6" onClick={() => scrollToSection('contact')}>
-                    Выбрать тариф
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="border-border hover:border-primary transition-all duration-300">
-                <CardHeader>
-                  <CardTitle className="text-2xl">VIP</CardTitle>
-                  <CardDescription>Полный комплекс услуг</CardDescription>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">₽750,000</span>
-                    <span className="text-muted-foreground">/месяц</span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Команда 4+ человек</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Круглосуточно 24/7</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Элитное оборудование</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Парк бронированных машин</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Международная охрана</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={18} className="text-primary" />
-                      <span>Защита семьи и объектов</span>
-                    </li>
-                  </ul>
-                  <Button className="w-full mt-6" variant="outline" onClick={() => scrollToSection('contact')}>
-                    Выбрать тариф
-                  </Button>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
