@@ -240,7 +240,10 @@ const Index = () => {
                       <Icon name="Check" size={16} className="text-primary" />
                       Правовое сопровождение
                     </li>
-                    <li className="flex items-center gap-2">Участие в судебных процессах всех инстанций</li>
+                    <li className="flex items-center gap-2">
+                      <Icon name="Check" size={16} className="text-primary" />
+                      Участие в судебных процессах всех инстанций
+                    </li>
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
                       Арбитраж
