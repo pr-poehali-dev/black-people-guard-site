@@ -166,7 +166,7 @@ const Index = () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
-                      Бронированный транспорт
+                      Автомобиль премиум-класса
                     </li>
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
