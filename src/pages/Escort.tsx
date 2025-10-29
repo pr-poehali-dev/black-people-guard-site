@@ -28,10 +28,8 @@ const Escort = () => {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
               <Icon name="Car" size={60} className="text-primary mb-4" />
-              <h1 className="text-5xl font-bold mb-4">Сопровождение</h1>
-              <p className="text-xl text-muted-foreground">
-                Безопасное сопровождение на мероприятия и в деловых поездках
-              </p>
+              <h1 className="text-5xl font-bold mb-4">Сопровождение ценных грузов</h1>
+              <p className="text-xl text-muted-foreground"></p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
