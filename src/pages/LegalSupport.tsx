@@ -94,62 +94,64 @@ const LegalSupport = () => {
 
             <Card className="border-primary shadow-lg shadow-primary/20 mb-8">
               <CardHeader>
-                <CardTitle className="text-3xl">Стоимость услуги</CardTitle>
+                <CardTitle className="text-3xl">Предлагаемые услуги</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-6">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-primary">₽75,000</span>
-                    <span className="text-xl text-muted-foreground">/месяц</span>
-                  </div>
-                  
-                  <div className="space-y-3 text-muted-foreground">
-                    <p className="flex items-center gap-2">
-                      <Icon name="Check" size={20} className="text-primary" />
-                      Персональный юрист на абонентском обслуживании
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <Icon name="Check" size={20} className="text-primary" />
-                      До 20 консультаций в месяц
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <Icon name="Check" size={20} className="text-primary" />
-                      Подготовка договоров и документов
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <Icon name="Check" size={20} className="text-primary" />
-                      Проверка контрагентов и партнёров
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <Icon name="Check" size={20} className="text-primary" />
-                      Представительство в госорганах
-                    </p>
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-start gap-3 p-4 bg-secondary/30 rounded-lg">
+                    <Icon name="Briefcase" size={24} className="text-primary mt-1" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-lg">Выезд адвоката</p>
+                      <p className="text-muted-foreground">от 30 000 рублей</p>
+                    </div>
                   </div>
 
-                  <Button size="lg" className="w-full text-lg" onClick={() => navigate('/#contact')}>
-                    Заказать услугу
-                  </Button>
+                  <div className="flex items-start gap-3 p-4 bg-secondary/30 rounded-lg">
+                    <Icon name="MessageSquare" size={24} className="text-primary mt-1" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-lg">Юридическая консультация</p>
+                      <p className="text-muted-foreground">от 5 000 рублей</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 bg-secondary/30 rounded-lg">
+                    <Icon name="Clock" size={24} className="text-primary mt-1" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-lg">Выезд личного адвоката</p>
+                      <p className="text-muted-foreground">от 30 000 рублей в час</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 bg-secondary/30 rounded-lg">
+                    <Icon name="Calendar" size={24} className="text-primary mt-1" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-lg">Юридическое сопровождение на календарный день</p>
+                      <p className="text-muted-foreground">по договорённости</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 bg-secondary/30 rounded-lg">
+                    <Icon name="Gavel" size={24} className="text-primary mt-1" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-lg">Сопровождение в суде всех инстанций</p>
+                      <p className="text-muted-foreground">по договорённости</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 bg-secondary/30 rounded-lg">
+                    <Icon name="Scale" size={24} className="text-primary mt-1" />
+                    <div className="flex-1">
+                      <p className="font-semibold text-lg">Арбитражный процесс</p>
+                      <p className="text-muted-foreground">по договорённости</p>
+                    </div>
+                  </div>
                 </div>
+
+                <Button size="lg" className="w-full text-lg" onClick={() => navigate('/#contact')}>
+                  Заказать услугу
+                </Button>
               </CardContent>
             </Card>
-
-            <div className="bg-secondary/30 rounded-lg p-6">
-              <h3 className="text-2xl font-bold mb-4">Дополнительные опции</h3>
-              <div className="space-y-3 text-muted-foreground">
-                <p className="flex items-center gap-2">
-                  <Icon name="Plus" size={18} className="text-primary" />
-                  Судебное представительство: от ₽50,000 за дело
-                </p>
-                <p className="flex items-center gap-2">
-                  <Icon name="Plus" size={18} className="text-primary" />
-                  Срочные консультации (24/7): +₽25,000/месяц
-                </p>
-                <p className="flex items-center gap-2">
-                  <Icon name="Plus" size={18} className="text-primary" />
-                  Полный юридический аудит: ₽85,000 единоразово
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </main>
