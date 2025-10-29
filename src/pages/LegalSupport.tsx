@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
-const BusinessSecurity = () => {
+const LegalSupport = () => {
   const navigate = useNavigate();
 
   return (
@@ -27,10 +27,10 @@ const BusinessSecurity = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
-              <Icon name="Briefcase" size={60} className="text-primary mb-4" />
-              <h1 className="text-5xl font-bold mb-4">Деловая безопасность</h1>
+              <Icon name="Scale" size={60} className="text-primary mb-4" />
+              <h1 className="text-5xl font-bold mb-4">Правовая помощь</h1>
               <p className="text-xl text-muted-foreground">
-                Комплексная защита при проведении деловых встреч и переговоров
+                Профессиональная юридическая поддержка в вопросах безопасности
               </p>
             </div>
 
@@ -38,27 +38,13 @@ const BusinessSecurity = () => {
               <Card className="border-border">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Icon name="ShieldCheck" size={24} className="text-primary" />
-                    Охрана переговоров
+                    <Icon name="FileText" size={24} className="text-primary" />
+                    Правовое сопровождение
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Обеспечение безопасности во время важных деловых встреч и переговоров
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-border">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Icon name="SearchCheck" size={24} className="text-primary" />
-                    Проверка помещений
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Техническая проверка помещений на наличие подслушивающих устройств
+                    Полное юридическое сопровождение вопросов личной и корпоративной безопасности
                   </p>
                 </CardContent>
               </Card>
@@ -67,12 +53,12 @@ const BusinessSecurity = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Icon name="FileCheck" size={24} className="text-primary" />
-                    Контроль информации
+                    Оформление документов
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Защита конфиденциальной информации и контроль утечек данных
+                    Подготовка и оформление всех необходимых документов для охранной деятельности
                   </p>
                 </CardContent>
               </Card>
@@ -80,13 +66,27 @@ const BusinessSecurity = () => {
               <Card className="border-border">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Icon name="Users" size={24} className="text-primary" />
-                    Проверка контрагентов
+                    <Icon name="MessageSquare" size={24} className="text-primary" />
+                    Консультации юристов
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Предварительная проверка деловых партнёров и участников встречи
+                    Квалифицированные консультации по вопросам безопасности и защиты прав
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-border">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Icon name="Gavel" size={24} className="text-primary" />
+                    Судебное представительство
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Представление интересов клиента в судах по вопросам безопасности
                   </p>
                 </CardContent>
               </Card>
@@ -99,30 +99,30 @@ const BusinessSecurity = () => {
               <CardContent>
                 <div className="space-y-6">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-primary">₽145,000</span>
+                    <span className="text-5xl font-bold text-primary">₽75,000</span>
                     <span className="text-xl text-muted-foreground">/месяц</span>
                   </div>
                   
                   <div className="space-y-3 text-muted-foreground">
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
-                      До 10 охраняемых встреч в месяц
+                      Персональный юрист на абонентском обслуживании
                     </p>
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
-                      Техническая проверка помещений перед встречей
+                      До 20 консультаций в месяц
                     </p>
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
-                      Команда из 2-3 специалистов на встрече
+                      Подготовка договоров и документов
                     </p>
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
-                      Базовая проверка контрагентов
+                      Проверка контрагентов и партнёров
                     </p>
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
-                      Защита от прослушки и видеозаписи
+                      Представительство в госорганах
                     </p>
                   </div>
 
@@ -138,15 +138,15 @@ const BusinessSecurity = () => {
               <div className="space-y-3 text-muted-foreground">
                 <p className="flex items-center gap-2">
                   <Icon name="Plus" size={18} className="text-primary" />
-                  Дополнительные встречи: ₽15,000 за встречу
+                  Судебное представительство: от ₽50,000 за дело
                 </p>
                 <p className="flex items-center gap-2">
                   <Icon name="Plus" size={18} className="text-primary" />
-                  Углубленная проверка контрагентов: ₽25,000 за человека
+                  Срочные консультации (24/7): +₽25,000/месяц
                 </p>
                 <p className="flex items-center gap-2">
                   <Icon name="Plus" size={18} className="text-primary" />
-                  Личное сопровождение руководителя: +₽85,000/месяц
+                  Полный юридический аудит: ₽85,000 единоразово
                 </p>
               </div>
             </div>
@@ -163,4 +163,4 @@ const BusinessSecurity = () => {
   );
 };
 
-export default BusinessSecurity;
+export default LegalSupport;

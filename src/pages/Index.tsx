@@ -209,28 +209,28 @@ const Index = () => {
 
               <Card 
                 className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer"
-                onClick={() => navigate('/service/business-security')}
+                onClick={() => navigate('/service/legal-support')}
               >
                 <CardHeader>
-                  <Icon name="Briefcase" size={40} className="text-primary mb-4" />
-                  <CardTitle>Деловая безопасность</CardTitle>
+                  <Icon name="Scale" size={40} className="text-primary mb-4" />
+                  <CardTitle>Правовая помощь</CardTitle>
                   <CardDescription>
-                    Защита при проведении деловых встреч
+                    Юридическая поддержка в сфере безопасности
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
-                      Охрана переговоров
+                      Правовое сопровождение
                     </li>
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
-                      Проверка помещений
+                      Оформление документов
                     </li>
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
-                      Контроль информации
+                      Консультации юристов
                     </li>
                   </ul>
                   <Button className="w-full mt-4" variant="outline">
