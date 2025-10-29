@@ -90,15 +90,11 @@ const Escort = () => {
                   <div className="space-y-3 text-muted-foreground">
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
-                      Сопровождение до 15 выездов в месяц
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <Icon name="Check" size={20} className="text-primary" />
                       Предварительная разведка маршрутов
                     </p>
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
-                      Команда из 2-3 специалистов
+                      Команда из 2 специалистов
                     </p>
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
