@@ -140,14 +140,14 @@ const PersonalSecurity = () => {
                   <Icon name="Clock" size={24} className="text-primary mt-1" />
                   <div>
                     <p className="font-semibold text-lg mb-1">До 24 часов в сутки</p>
-                    <p className="text-muted-foreground">от 45.000 рублей</p>
+                    <p className="text-muted-foreground">от 45 000 рублей</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-4 bg-background rounded-lg">
                   <Icon name="Clock" size={24} className="text-primary mt-1" />
                   <div>
                     <p className="font-semibold text-lg mb-1">До 6 часов в сутки</p>
-                    <p className="text-muted-foreground">от 25.000 рублей</p>
+                    <p className="text-muted-foreground">от 25 000 рублей</p>
                   </div>
                 </div>
               </div>
