@@ -242,52 +242,68 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="team" className="py-20">
+        <section id="team" className="py-20 bg-black text-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Наша команда</h2>
-            <p className="text-center text-muted-foreground mb-12 text-lg">
-              Элитные специалисты с опытом работы в спецслужбах
-            </p>
-
-            <div className="relative mb-12">
-              <img 
-                src="https://cdn.poehali.dev/projects/4e2a6299-af12-423f-b91b-6eee2580b228/files/dfa4ec7f-9935-44e3-bbf8-cd7b6b950abb.jpg"
-                alt="Команда профессионалов"
-                className="w-full h-[400px] object-cover rounded-lg"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent rounded-lg"></div>
+            <div className="flex flex-col md:flex-row items-start gap-8 mb-16">
+              <div className="flex items-center gap-4">
+                <div className="w-24 h-24 flex items-center justify-center">
+                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" className="text-white">
+                    <path d="M20 30 L30 20 L50 20 L60 30 L60 50 L40 70 L20 50 Z" stroke="currentColor" strokeWidth="2" fill="none"/>
+                    <path d="M30 35 L35 40 L50 25" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M15 40 C15 40 10 35 10 35 L10 25 C10 25 15 20 15 20" stroke="currentColor" strokeWidth="2" fill="none"/>
+                    <path d="M65 40 C65 40 70 35 70 35 L70 25 C70 25 65 20 65 20" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  </svg>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-primary">
+                  Почему нам доверяют<br />самое ценное?
+                </h2>
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="bg-secondary rounded-full w-24 h-24 mx-auto mb-4 flex items-center justify-center">
-                  <Icon name="Award" size={40} className="text-primary" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
+              <div>
+                <div className="border border-white/30 rounded-full inline-block px-6 py-3 mb-6">
+                  <span className="text-lg">1. Элитный кадровый отбор</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Опыт 15+ лет</h3>
-                <p className="text-muted-foreground">
-                  Все сотрудники имеют опыт службы в элитных подразделениях
+                <p className="text-white/70 leading-relaxed">
+                  Наши специалисты исключительно из числа бывших сотрудников спецподразделений с безупречным послужным списком.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="bg-secondary rounded-full w-24 h-24 mx-auto mb-4 flex items-center justify-center">
-                  <Icon name="GraduationCap" size={40} className="text-primary" />
+              <div>
+                <div className="border border-white/30 rounded-full inline-block px-6 py-3 mb-6">
+                  <span className="text-lg">2. «Невидимая» охрана</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Профессионализм</h3>
-                <p className="text-muted-foreground">
-                  Постоянное обучение и повышение квалификации персонала
+                <p className="text-white/70 leading-relaxed">
+                  Наши специалисты обеспечивают вашу безопасность, не привлекая внимания и не нарушая ваш привычный образ жизни.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="bg-secondary rounded-full w-24 h-24 mx-auto mb-4 flex items-center justify-center">
-                  <Icon name="CheckCircle" size={40} className="text-primary" />
+              <div>
+                <div className="border border-white/30 rounded-full inline-block px-6 py-3 mb-6">
+                  <span className="text-lg">3. Индивидуальный подход</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Надёжность</h3>
-                <p className="text-muted-foreground">
-                  100% выполнение поставленных задач по защите клиентов
+                <p className="text-white/70 leading-relaxed">
+                  Разработка персональных протоколов безопасности для каждого члена семьи и объекта.
                 </p>
               </div>
+
+              <div>
+                <div className="border border-white/30 rounded-full inline-block px-6 py-3 mb-6">
+                  <span className="text-lg">4. Технологии премиум-класса</span>
+                </div>
+                <p className="text-white/70 leading-relaxed">
+                  Используем только лучшее и проверенное оборудование, интегрируемое в вашу smart-среду незаметно.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12 text-center text-white/40 text-sm">
+              <p>«ЛЮДИ В ЧЁРНОМ»</p>
+              <p className="flex items-center justify-center gap-2 mt-2">
+                <Icon name="Copyright" size={16} />
+                Все права защищены
+              </p>
             </div>
           </div>
         </section>
