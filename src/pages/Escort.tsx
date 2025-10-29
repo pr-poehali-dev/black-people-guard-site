@@ -83,7 +83,7 @@ const Escort = () => {
               <CardContent>
                 <div className="space-y-6">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-primary">от 100 000 рублей</span>
+                    <span className="text-5xl font-bold text-primary">От 100 000 рублей</span>
                     <span className="text-xl text-muted-foreground">/месяц</span>
                   </div>
                   
