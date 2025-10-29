@@ -246,7 +246,7 @@ const Index = () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
-                      Арбитраж
+                      Арбитражный процесс
                     </li>
                   </ul>
                   <Button className="w-full mt-4" variant="outline">
