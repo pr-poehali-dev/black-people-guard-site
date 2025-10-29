@@ -57,9 +57,7 @@ const PersonalSecurity = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">
-                    Все телохранители имеют опыт службы в спецподразделениях и регулярно проходят переподготовку
-                  </p>
+                  <p className="text-muted-foreground">Все телохранители имеют опыт службы в спецподразделениях и регулярно проходят дополнительную подготовку</p>
                 </CardContent>
               </Card>
 
