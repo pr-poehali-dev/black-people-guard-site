@@ -181,32 +181,32 @@ const Index = () => {
 
               <Card 
                 className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer"
-                onClick={() => navigate('/service/property-security')}
+                onClick={() => navigate('/service/information-security')}
               >
                 <CardHeader>
-                  <Icon name="Home" size={40} className="text-primary mb-4" />
-                  <CardTitle>Охрана объектов</CardTitle>
+                  <Icon name="ShieldCheck" size={40} className="text-primary mb-4" />
+                  <CardTitle>Информационная безопасность</CardTitle>
                   <CardDescription>
-                    Защита жилых и коммерческих объектов
+                    Защита цифровых активов и конфиденциальных данных
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
-                      Видеонаблюдение
+                      Аудит безопасности
                     </li>
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
-                      Контроль доступа
+                      Защита от утечек данных
                     </li>
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
-                      Патрулирование
+                      Мониторинг угроз
                     </li>
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
-                      Конфиденциальность
+                      Шифрование данных
                     </li>
                   </ul>
                   <Button className="w-full mt-4" variant="outline">
