@@ -220,10 +220,7 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-primary" />
-                      Правовое сопровождение
-                    </li>
+                    <li className="flex items-center gap-2">Консультации юристов</li>
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
                       Оформление документов
