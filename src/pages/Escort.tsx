@@ -67,7 +67,7 @@ const Escort = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Icon name="ShieldCheck" size={24} className="text-primary" />
-                    Бронированный транспорт
+                    Автомобиль премиум класса
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
