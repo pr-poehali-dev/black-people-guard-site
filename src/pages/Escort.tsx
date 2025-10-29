@@ -50,27 +50,13 @@ const Escort = () => {
               <Card className="border-border">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Icon name="SearchCheck" size={24} className="text-primary" />
-                    Контроль безопасности
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Предварительный осмотр места проведения мероприятия и контроль периметра
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-border">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
                     <Icon name="ShieldCheck" size={24} className="text-primary" />
                     Автомобиль премиум класса
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Использование бронированных автомобилей класса люкс с опытным водителем-охранником
+                    Использование автомобилей класса люкс с опытным водителем-охранником
                   </p>
                 </CardContent>
               </Card>
@@ -114,7 +100,10 @@ const Escort = () => {
                       <Icon name="Check" size={20} className="text-primary" />
                       Команда из 2-3 специалистов
                     </p>
-                    <p className="flex items-center gap-2">Автомобиль премиум-класса</p>
+                    <p className="flex items-center gap-2">
+                      <Icon name="Check" size={20} className="text-primary" />
+                      Автомобиль премиум-класса
+                    </p>
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
                       Диспетчерская служба 24/7
@@ -128,23 +117,7 @@ const Escort = () => {
               </CardContent>
             </Card>
 
-            <div className="bg-secondary/30 rounded-lg p-6">
-              <h3 className="text-2xl font-bold mb-4">Дополнительные опции</h3>
-              <div className="space-y-3 text-muted-foreground">
-                <p className="flex items-center gap-2">
-                  <Icon name="Plus" size={18} className="text-primary" />
-                  Дополнительные выезды: ₽8,500 за выезд
-                </p>
-                <p className="flex items-center gap-2">
-                  <Icon name="Plus" size={18} className="text-primary" />
-                  VIP-автомобиль с улучшенной броней: +₽45,000/месяц
-                </p>
-                <p className="flex items-center gap-2">
-                  <Icon name="Plus" size={18} className="text-primary" />
-                  Сопровождение вертолётом: по запросу
-                </p>
-              </div>
-            </div>
+
           </div>
         </div>
       </main>
