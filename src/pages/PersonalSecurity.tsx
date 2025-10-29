@@ -99,7 +99,7 @@ const PersonalSecurity = () => {
               <CardContent>
                 <div className="space-y-6">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-primary">₽1.300.000</span>
+                    <span className="text-5xl font-bold text-primary">₽1 300 000</span>
                     <span className="text-xl text-muted-foreground">/месяц</span>
                   </div>
                   
