@@ -84,7 +84,7 @@ const Index = () => {
           />
           <div className="container mx-auto px-4 relative z-20">
             <div className="max-w-3xl">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 Профессиональная защита<br />
                 <span className="text-primary">24/7</span>
               </h1>
