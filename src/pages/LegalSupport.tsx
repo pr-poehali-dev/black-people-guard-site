@@ -99,14 +99,6 @@ const LegalSupport = () => {
               <CardContent>
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3 p-4 bg-secondary/30 rounded-lg">
-                    <Icon name="Briefcase" size={24} className="text-primary mt-1" />
-                    <div className="flex-1">
-                      <p className="font-semibold text-lg">Выезд адвоката</p>
-                      <p className="text-muted-foreground">от 30 000 рублей</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3 p-4 bg-secondary/30 rounded-lg">
                     <Icon name="MessageSquare" size={24} className="text-primary mt-1" />
                     <div className="flex-1">
                       <p className="font-semibold text-lg">Юридическая консультация</p>
@@ -115,7 +107,7 @@ const LegalSupport = () => {
                   </div>
 
                   <div className="flex items-start gap-3 p-4 bg-secondary/30 rounded-lg">
-                    <Icon name="Clock" size={24} className="text-primary mt-1" />
+                    <Icon name="Briefcase" size={24} className="text-primary mt-1" />
                     <div className="flex-1">
                       <p className="font-semibold text-lg">Выезд личного адвоката</p>
                       <p className="text-muted-foreground">от 30 000 рублей в час</p>
