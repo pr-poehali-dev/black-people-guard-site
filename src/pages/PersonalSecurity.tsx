@@ -134,20 +134,22 @@ const PersonalSecurity = () => {
             </Card>
 
             <div className="bg-secondary/30 rounded-lg p-6">
-              <h3 className="text-2xl font-bold mb-4">Дополнительные опции</h3>
-              <div className="space-y-3 text-muted-foreground">
-                <p className="flex items-center gap-2">
-                  <Icon name="Plus" size={18} className="text-primary" />
-                  Второй телохранитель: +₽150,000/месяц
-                </p>
-                <p className="flex items-center gap-2">
-                  <Icon name="Plus" size={18} className="text-primary" />
-                  Бронированный автомобиль с водителем: +₽95,000/месяц
-                </p>
-                <p className="flex items-center gap-2">
-                  <Icon name="Plus" size={18} className="text-primary" />
-                  Международное сопровождение: по запросу
-                </p>
+              <h3 className="text-2xl font-bold mb-4">Услуги одного телохранителя на один день</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3 p-4 bg-background rounded-lg">
+                  <Icon name="Clock" size={24} className="text-primary mt-1" />
+                  <div>
+                    <p className="font-semibold text-lg mb-1">До 24 часов в сутки</p>
+                    <p className="text-muted-foreground">от 45.000 рублей</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 p-4 bg-background rounded-lg">
+                  <Icon name="Clock" size={24} className="text-primary mt-1" />
+                  <div>
+                    <p className="font-semibold text-lg mb-1">До 6 часов в сутки</p>
+                    <p className="text-muted-foreground">от 25.000 рублей</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
