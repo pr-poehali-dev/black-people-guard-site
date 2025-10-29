@@ -168,6 +168,10 @@ const Index = () => {
                       <Icon name="Check" size={16} className="text-primary" />
                       Бронированный транспорт
                     </li>
+                    <li className="flex items-center gap-2">
+                      <Icon name="Check" size={16} className="text-primary" />
+                      Конфиденциальность
+                    </li>
                   </ul>
                   <Button className="w-full mt-4" variant="outline">
                     Подробнее
@@ -200,6 +204,10 @@ const Index = () => {
                       <Icon name="Check" size={16} className="text-primary" />
                       Патрулирование
                     </li>
+                    <li className="flex items-center gap-2">
+                      <Icon name="Check" size={16} className="text-primary" />
+                      Конфиденциальность
+                    </li>
                   </ul>
                   <Button className="w-full mt-4" variant="outline">
                     Подробнее
@@ -220,14 +228,25 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2">Консультации юристов</li>
+                    <li className="flex items-center gap-2">
+                      <Icon name="Check" size={16} className="text-primary" />
+                      Консультации юристов
+                    </li>
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
                       Оформление документов
                     </li>
                     <li className="flex items-center gap-2">
                       <Icon name="Check" size={16} className="text-primary" />
-                      Консультации юристов
+                      Правовое сопровождение
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Icon name="Check" size={16} className="text-primary" />
+                      Участие в судебных процессах
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Icon name="Check" size={16} className="text-primary" />
+                      Арбитраж
                     </li>
                   </ul>
                   <Button className="w-full mt-4" variant="outline">
