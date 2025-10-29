@@ -315,11 +315,8 @@ const Index = () => {
             </div>
 
             <div className="mt-12 text-center text-white/40 text-sm">
-              <p>«ЛЮДИ В ЧЁРНОМ»</p>
-              <p className="flex items-center justify-center gap-2 mt-2">
-                <Icon name="Copyright" size={16} />
-                Все права защищены
-              </p>
+              <p></p>
+              <p className="flex items-center justify-center gap-2 mt-2"></p>
             </div>
           </div>
         </section>
