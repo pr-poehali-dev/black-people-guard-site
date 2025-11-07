@@ -66,20 +66,6 @@ const InformationSecurity = () => {
               <Card className="border-border">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Icon name="Radar" size={24} className="text-primary" />
-                    Мониторинг угроз
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Круглосуточное отслеживание кибератак и потенциальных угроз безопасности
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-border">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
                     <Icon name="FileCheck" size={24} className="text-primary" />
                     Соответствие стандартам
                   </CardTitle>
