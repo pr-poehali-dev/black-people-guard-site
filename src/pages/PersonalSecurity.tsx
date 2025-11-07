@@ -153,12 +153,6 @@ const PersonalSecurity = () => {
           </div>
         </div>
       </main>
-
-      <footer className="bg-secondary py-8 border-t border-border">
-        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>© 2024 Люди в Чёрном. Все права защищены. Лицензия ЧОО №123456</p>
-        </div>
-      </footer>
     </div>
   );
 };
