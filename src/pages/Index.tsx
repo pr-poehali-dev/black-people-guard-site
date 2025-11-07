@@ -204,10 +204,7 @@ const Index = () => {
                       <Icon name="Check" size={16} className="text-primary" />
                       Мониторинг угроз
                     </li>
-                    <li className="flex items-center gap-2">
-                      <Icon name="Check" size={16} className="text-primary" />
-                      Шифрование данных
-                    </li>
+                    <li className="flex items-center gap-2"></li>
                   </ul>
                   <Button className="w-full mt-4" variant="outline">
                     Подробнее
