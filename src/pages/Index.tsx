@@ -9,6 +9,9 @@ import Icon from '@/components/ui/icon';
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -327,7 +330,32 @@ const Index = () => {
 
               <Card className="border-border">
                 <CardContent className="pt-6">
-                  <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                  <form className="space-y-6" onSubmit={async (e) => {
+                    e.preventDefault();
+                    setIsSubmitting(true);
+                    setSubmitMessage('');
+                    
+                    try {
+                      const response = await fetch('https://functions.poehali.dev/db40a795-2a91-4071-9cf6-0e2078c5dae1', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                      });
+                      
+                      const data = await response.json();
+                      
+                      if (response.ok) {
+                        setSubmitMessage('Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
+                        setFormData({ name: '', phone: '', email: '', message: '' });
+                      } else {
+                        setSubmitMessage(data.error || 'Произошла ошибка при отправке');
+                      }
+                    } catch (error) {
+                      setSubmitMessage('Ошибка соединения. Попробуйте позже.');
+                    } finally {
+                      setIsSubmitting(false);
+                    }
+                  }}>
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2">
                         Ваше имя
@@ -336,6 +364,9 @@ const Index = () => {
                         id="name" 
                         placeholder="Иван Иванов" 
                         className="bg-secondary border-border"
+                        value={formData.name}
+                        onChange={(e) => setFormData({...formData, name: e.target.value})}
+                        required
                       />
                     </div>
 
@@ -348,6 +379,9 @@ const Index = () => {
                         type="tel" 
                         placeholder="+7 (999) 123-45-67" 
                         className="bg-secondary border-border"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                        required
                       />
                     </div>
 
@@ -360,6 +394,9 @@ const Index = () => {
                         type="email" 
                         placeholder="ivan@example.com" 
                         className="bg-secondary border-border"
+                        value={formData.email}
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        required
                       />
                     </div>
 
@@ -372,12 +409,19 @@ const Index = () => {
                         placeholder="Расскажите о ваших потребностях в охране..." 
                         rows={5}
                         className="bg-secondary border-border"
+                        value={formData.message}
+                        onChange={(e) => setFormData({...formData, message: e.target.value})}
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full">
-                      Отправить заявку
+                    <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                     </Button>
+                    {submitMessage && (
+                      <p className={`text-center text-sm ${submitMessage.includes('успешно') ? 'text-green-600' : 'text-red-600'}`}>
+                        {submitMessage}
+                      </p>
+                    )}
                   </form>
 
                   <div className="mt-8 pt-8 border-t border-border">
