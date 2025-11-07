@@ -90,7 +90,7 @@ const InformationSecurity = () => {
                       <span className="text-xl text-muted-foreground">для физ. лица</span>
                     </div>
                     <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold text-primary">₽500,000</span>
+                      <span className="text-4xl font-bold text-primary">500 000 рублей</span>
                       <span className="text-xl text-muted-foreground">для юр. лица</span>
                     </div>
                   </div>
