@@ -66,7 +66,7 @@ const InformationSecurity = () => {
               <Card className="border-border">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Icon name="Check" size={24} className="text-primary" />
+                    <Icon name="FileCheck" size={24} className="text-primary" />
                     Соответствие стандартам
                   </CardTitle>
                 </CardHeader>
