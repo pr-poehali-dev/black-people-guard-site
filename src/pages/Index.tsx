@@ -425,55 +425,6 @@ const Index = () => {
           </div>
         </section>
       </main>
-
-      <footer className="bg-secondary py-12 border-t border-border">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="Shield" className="text-primary" size={28} />
-                <span className="text-xl font-bold">Люди в Чёрном</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Профессиональная охрана и безопасность с 2008 года
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-bold mb-4">Услуги</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Личная охрана</li>
-                <li>Сопровождение</li>
-                <li>Охрана объектов</li>
-                <li>Защита семьи</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold mb-4">Компания</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>О нас</li>
-                <li>Команда</li>
-                <li>Лицензии</li>
-                <li>Вакансии</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold mb-4">Контакты</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>+7 (495) 000-00-00</li>
-                <li>info@mib-security.ru</li>
-                <li>Москва, Кутузовский пр-т, 12</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>© 2024 Люди в Чёрном. Все права защищены. Лицензия ЧОО №123456</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
