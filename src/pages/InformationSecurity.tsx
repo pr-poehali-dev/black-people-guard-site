@@ -118,24 +118,6 @@ const InformationSecurity = () => {
                 </div>
               </CardContent>
             </Card>
-
-            <div className="bg-secondary/30 rounded-lg p-6">
-              <h3 className="text-2xl font-bold mb-4">Дополнительные опции</h3>
-              <div className="space-y-3 text-muted-foreground">
-                <p className="flex items-center gap-2">
-                  <Icon name="Plus" size={18} className="text-primary" />
-                  Пентест (тестирование на проникновение): от ₽200,000
-                </p>
-                <p className="flex items-center gap-2">
-                  <Icon name="Plus" size={18} className="text-primary" />
-                  Разработка политики безопасности: от ₽120,000
-                </p>
-                <p className="flex items-center gap-2">
-                  <Icon name="Plus" size={18} className="text-primary" />
-                  Расследование инцидентов: от ₽80,000 за инцидент
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </main>
