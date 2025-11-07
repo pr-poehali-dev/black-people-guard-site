@@ -86,7 +86,7 @@ const InformationSecurity = () => {
                 <div className="space-y-6">
                   <div className="space-y-4">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold text-primary">₽200,000</span>
+                      <span className="text-4xl font-bold text-primary">200 000</span>
                       <span className="text-xl text-muted-foreground">для физ. лица</span>
                     </div>
                     <div className="flex items-baseline gap-2">
