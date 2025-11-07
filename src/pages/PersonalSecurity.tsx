@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -5,6 +6,7 @@ import Icon from '@/components/ui/icon';
 
 const PersonalSecurity = () => {
   const navigate = useNavigate();
+  const [showContactModal, setShowContactModal] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -124,7 +126,7 @@ const PersonalSecurity = () => {
                     </p>
                   </div>
 
-                  <Button size="lg" className="w-full text-lg" onClick={() => navigate('/#contact')}>
+                  <Button size="lg" className="w-full text-lg" onClick={() => setShowContactModal(true)}>
                     Заказать услугу
                   </Button>
                 </div>
@@ -153,6 +155,53 @@ const PersonalSecurity = () => {
           </div>
         </div>
       </main>
+
+      {showContactModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4" onClick={() => setShowContactModal(false)}>
+          <div className="bg-background rounded-lg shadow-xl max-w-md w-full p-6" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold">Связаться с нами</h3>
+              <Button variant="ghost" size="icon" onClick={() => setShowContactModal(false)}>
+                <Icon name="X" size={24} />
+              </Button>
+            </div>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <Icon name="Phone" className="text-primary mt-1" size={20} />
+                <div>
+                  <p className="font-medium">WhatsApp</p>
+                  <p className="text-muted-foreground">+7-905-729-79-75</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <Icon name="Send" className="text-primary mt-1" size={20} />
+                <div>
+                  <p className="font-medium">Telegram</p>
+                  <p className="text-muted-foreground">+7-993-119-05-12</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <Icon name="Mail" className="text-primary mt-1" size={20} />
+                <div>
+                  <p className="font-medium">Email</p>
+                  <p className="text-muted-foreground">men_in_black_group@bk.ru</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <Icon name="Clock" className="text-primary mt-1" size={20} />
+                <div>
+                  <p className="font-medium">Режим работы</p>
+                  <p className="text-muted-foreground">С 10:00 до 20:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
