@@ -84,9 +84,15 @@ const InformationSecurity = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-primary">₽150,000</span>
-                    <span className="text-xl text-muted-foreground">/месяц</span>
+                  <div className="space-y-4">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-4xl font-bold text-primary">₽200,000</span>
+                      <span className="text-xl text-muted-foreground">для физ. лица</span>
+                    </div>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-4xl font-bold text-primary">₽500,000</span>
+                      <span className="text-xl text-muted-foreground">для юр. лица</span>
+                    </div>
                   </div>
                   
                   <div className="space-y-3 text-muted-foreground">
@@ -97,14 +103,6 @@ const InformationSecurity = () => {
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
                       Соответствие стандартам
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <Icon name="Check" size={20} className="text-primary" />
-                      Защита от DDoS-атак
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <Icon name="Check" size={20} className="text-primary" />
-                      Настройка систем шифрования
                     </p>
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
