@@ -80,13 +80,13 @@ const InformationSecurity = () => {
               <Card className="border-border">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Icon name="Lock" size={24} className="text-primary" />
-                    Шифрование данных
+                    <Icon name="FileCheck" size={24} className="text-primary" />
+                    Соответствие стандартам
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Внедрение современных протоколов шифрования для защиты критически важной информации
+                    Обеспечение соответствия требованиям GDPR, ISO 27001 и других международных стандартов
                   </p>
                 </CardContent>
               </Card>
