@@ -96,7 +96,7 @@ const InformationSecurity = () => {
                     </p>
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
-                      Мониторинг угроз 24/7
+                      Соответствие стандартам
                     </p>
                     <p className="flex items-center gap-2">
                       <Icon name="Check" size={20} className="text-primary" />
