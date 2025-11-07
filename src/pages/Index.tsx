@@ -389,8 +389,16 @@ const Index = () => {
                       <div className="flex items-start gap-3">
                         <Icon name="Phone" className="text-primary mt-1" size={20} />
                         <div>
-                          <p className="font-medium">Телефон</p>
-                          <p className="text-muted-foreground">+7 (495) 000-00-00</p>
+                          <p className="font-medium">WhatsApp</p>
+                          <p className="text-muted-foreground">+7-905-729-79-75</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <Icon name="Send" className="text-primary mt-1" size={20} />
+                        <div>
+                          <p className="font-medium">Telegram</p>
+                          <p className="text-muted-foreground">+7-993-119-05-12</p>
                         </div>
                       </div>
 
@@ -398,15 +406,7 @@ const Index = () => {
                         <Icon name="Mail" className="text-primary mt-1" size={20} />
                         <div>
                           <p className="font-medium">Email</p>
-                          <p className="text-muted-foreground">info@mib-security.ru</p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-3">
-                        <Icon name="MapPin" className="text-primary mt-1" size={20} />
-                        <div>
-                          <p className="font-medium">Адрес</p>
-                          <p className="text-muted-foreground">Москва, Кутузовский пр-т, д. 12</p>
+                          <p className="text-muted-foreground">men_in_black_group@bk.ru</p>
                         </div>
                       </div>
 
@@ -414,7 +414,7 @@ const Index = () => {
                         <Icon name="Clock" className="text-primary mt-1" size={20} />
                         <div>
                           <p className="font-medium">Режим работы</p>
-                          <p className="text-muted-foreground">Круглосуточно, без выходных</p>
+                          <p className="text-muted-foreground">С 10:00 до 20:00</p>
                         </div>
                       </div>
                     </div>
