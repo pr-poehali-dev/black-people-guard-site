@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 import Icon from '@/components/ui/icon';
 
 interface ContactRequest {
@@ -18,10 +19,38 @@ const Admin = () => {
   const [requests, setRequests] = useState<ContactRequest[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [authError, setAuthError] = useState('');
 
   useEffect(() => {
-    fetchRequests();
+    const savedAuth = sessionStorage.getItem('admin_auth');
+    if (savedAuth === 'true') {
+      setIsAuthenticated(true);
+      fetchRequests();
+    } else {
+      setLoading(false);
+    }
   }, []);
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === 'Ne28941375n4592150n') {
+      setIsAuthenticated(true);
+      sessionStorage.setItem('admin_auth', 'true');
+      setAuthError('');
+      setLoading(true);
+      fetchRequests();
+    } else {
+      setAuthError('Неверный пароль');
+    }
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    sessionStorage.removeItem('admin_auth');
+    navigate('/');
+  };
 
   const fetchRequests = async () => {
     try {
@@ -51,6 +80,42 @@ const Admin = () => {
     });
   };
 
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
+        <Card className="w-full max-w-md mx-4">
+          <CardHeader>
+            <CardTitle className="text-2xl text-center">Вход в админ-панель</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleLogin} className="space-y-4">
+              <div>
+                <label htmlFor="password" className="block text-sm font-medium mb-2">
+                  Пароль
+                </label>
+                <Input
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Введите пароль"
+                  className="bg-secondary border-border"
+                  required
+                />
+              </div>
+              {authError && (
+                <p className="text-red-600 text-sm">{authError}</p>
+              )}
+              <Button type="submit" className="w-full">
+                Войти
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -60,10 +125,16 @@ const Admin = () => {
               <Icon name="Shield" className="text-primary" size={32} />
               <span className="text-2xl font-bold tracking-tight">Люди в Чёрном</span>
             </div>
-            <Button variant="ghost" onClick={() => navigate('/')}>
-              <Icon name="ArrowLeft" size={20} className="mr-2" />
-              На главную
-            </Button>
+            <div className="flex gap-2">
+              <Button variant="ghost" onClick={handleLogout}>
+                <Icon name="LogOut" size={20} className="mr-2" />
+                Выйти
+              </Button>
+              <Button variant="ghost" onClick={() => navigate('/')}>
+                <Icon name="ArrowLeft" size={20} className="mr-2" />
+                На главную
+              </Button>
+            </div>
           </div>
         </nav>
       </header>
