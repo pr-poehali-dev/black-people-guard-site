@@ -1,3 +1,4 @@
 {
+  "get-contact-requests": "https://functions.poehali.dev/03a73d54-18fa-4f4d-807e-56f62266cb83",
   "submit-contact": "https://functions.poehali.dev/db40a795-2a91-4071-9cf6-0e2078c5dae1"
 }

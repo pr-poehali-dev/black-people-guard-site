@@ -9,6 +9,7 @@ import PersonalSecurity from "./pages/PersonalSecurity";
 import Escort from "./pages/Escort";
 import InformationSecurity from "./pages/InformationSecurity";
 import LegalSupport from "./pages/LegalSupport";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/service/escort" element={<Escort />} />
           <Route path="/service/information-security" element={<InformationSecurity />} />
           <Route path="/service/legal-support" element={<LegalSupport />} />
+          <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
